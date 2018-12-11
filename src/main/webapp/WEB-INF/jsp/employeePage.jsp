@@ -98,7 +98,7 @@
                                     		<a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=${itemPage}">${itemPage}</a>
                                     	</li>
                             		</c:forEach>
-                            		<li><a href="#">...</a></li>
+                            		<li><a href="javascript:void(0)">...</a></li>
                             		<li><a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=${totalPages}">${totalPages}</a></li>
                             	</c:if>
                             	<!-- 当前页数小于等于4时，显示1到5...最后一页  end -->
@@ -106,13 +106,13 @@
                             	<!-- 当前页数大于4时，如果当前页小于总页码书-3，则显示1...n-1,n,n+1...最后一页 -->
                             	<c:if test="${curPage > 4 && (curPage < totalPages-4) }">
                             		<li><a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=1">1</a></li>
-                            		<li><a href="#">...</a></li>
+                            		<li><a href="javascript:void(0)">...</a></li>
                             		<c:forEach begin="${curPage-1 }" end="${curPage +1  }" step="1" var="itemPage">
                                 		<li <c:if test="${curPage == itemPage}">class="active"</c:if>>
                                     		<a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=${itemPage}">${itemPage}</a>
                                     	</li>
                             		</c:forEach>
-                            		<li><a href="#">...</a></li>
+                            		<li><a href="javascript:void(0)">...</a></li>
                             		<li><a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=${totalPages}">${totalPages}</a></li>
                             	</c:if>
                             	<!-- 当前页数大于4时，如果当前页小于总页码书-3，则显示1...n-1,n,n+1...最后一页 end-->
@@ -120,7 +120,7 @@
                             	<!-- 当前页码小于等于n-4  -->
                             	<c:if test="${curPage >=  totalPages-4}">
                             		<li><a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=1">1</a></li>
-                            		<li><a href="#">...</a></li>
+                            		<li><a href="javascript:void(0)">...</a></li>
                             		<c:forEach begin="${totalPages-5}" end="${totalPages}" step="1" var="itemPage">
                                 		<li <c:if test="${curPage == itemPage}">class="active"</c:if>>
                                     		<a href="${pageContext.request.contextPath}/ssm/emp/getEmpList?pageNo=${itemPage}">${itemPage}</a>
